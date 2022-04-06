@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "427950342919",
+    "project_id": "chatapplication-8a657",
+    "storage_bucket": "chatapplication-8a657.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427950342919:android:fbcc05f722126f82fd3ba2",
+        "android_client_info": {
+          "package_name": "com.jaberkotlinproject.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427950342919-ucdh3abl3u8k60mqk3tqjghrrgqvl428.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAShE1tA5rtaxeu4yC-DnOKNsSFf2XEp_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427950342919-ucdh3abl3u8k60mqk3tqjghrrgqvl428.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427950342919:android:30f1b204b6111d42fd3ba2",
+        "android_client_info": {
+          "package_name": "comm.jaberkotlinproject.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427950342919-ucdh3abl3u8k60mqk3tqjghrrgqvl428.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAShE1tA5rtaxeu4yC-DnOKNsSFf2XEp_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427950342919-ucdh3abl3u8k60mqk3tqjghrrgqvl428.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
