@@ -31,7 +31,8 @@
             android:hint="Enter Your Text Here!"
             android:inputType="text"
             android:autofillHints=""
-            android:layout_weight="80"/>
+            android:layout_weight="80"
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/sendButton"
@@ -40,7 +41,8 @@
             android:layout_marginTop="10dp"
             android:layout_weight="20"
             android:contentDescription="sendButton"
-            android:src="@drawable/send_logo" />
+            android:src="@drawable/send_logo"
+            tools:ignore="HardcodedText" />
 
 
     </LinearLayout>

@@ -12,7 +12,9 @@
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
-        android:src="@drawable/app_logo" />
+        android:src="@drawable/app_logo"
+        android:contentDescription="Application Logo"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/edt_username"
@@ -20,11 +22,12 @@
         android:layout_height="50dp"
         android:layout_below="@id/app_logo"
         android:layout_marginTop="10dp"
-        android:hint="Username"
+        android:hint="@string/username"
         android:padding="15dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/edt_background"/>
+        android:background="@drawable/edt_background"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/edt_email"
@@ -32,11 +35,12 @@
         android:layout_height="50dp"
         android:layout_below="@id/edt_username"
         android:layout_marginTop="20dp"
-        android:hint="Email"
+        android:hint="@string/email"
         android:padding="15dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/edt_background"/>
+        android:background="@drawable/edt_background"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/edt_password"
@@ -44,11 +48,12 @@
         android:layout_height="50dp"
         android:layout_below="@id/edt_email"
         android:layout_marginTop="20dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:padding="15dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/edt_background"/>
+        android:background="@drawable/edt_background"
+        android:importantForAutofill="no" />
 
 
     <Button
@@ -57,7 +62,7 @@
         android:layout_height="wrap_content"
         android:width="150dp"
         android:layout_below="@id/edt_password"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:background="@drawable/btn_background"
         android:textColor="@color/white"
         android:textSize="15sp"

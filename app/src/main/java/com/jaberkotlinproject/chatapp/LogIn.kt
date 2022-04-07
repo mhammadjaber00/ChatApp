@@ -1,6 +1,8 @@
 package com.jaberkotlinproject.chatapp
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -20,6 +22,8 @@ class LogIn : AppCompatActivity() {
     private lateinit var btnLogIn: Button
     private lateinit var btnSignUp: Button
 
+    private lateinit var sharedPref: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLogInBinding.inflate(layoutInflater)
@@ -34,6 +38,12 @@ class LogIn : AppCompatActivity() {
         edtPassword = binding.edtPassword
         btnLogIn = binding.btnLogin
         btnSignUp = binding.btnSignUp
+
+        sharedPref = this.getSharedPreferences("UserStatus", Context.MODE_PRIVATE)
+
+        if (sharedPref.getBoolean("loggedIn", false)) {
+            goToMainActivity()
+        }
 
 
         btnSignUp.setOnClickListener {
@@ -56,13 +66,18 @@ class LogIn : AppCompatActivity() {
         mAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val intent = Intent(this@LogIn, MainActivity::class.java)
-                    finish()
-                    startActivity(intent)
+                    sharedPref.edit().putBoolean("loggedIn", true).apply()
+                    goToMainActivity()
                 } else {
                     Toast.makeText(this@LogIn, "User does not exist", Toast.LENGTH_SHORT).show()
                 }
             }
 
+    }
+
+    private fun goToMainActivity() {
+        val intent = Intent(this@LogIn, MainActivity::class.java)
+        finish()
+        startActivity(intent)
     }
 }
